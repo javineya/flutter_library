@@ -14,7 +14,9 @@ class MyDropdownButton extends StatefulWidget {
 }
 
 class _MyDropdownButtonState extends State<MyDropdownButton> {
-  String dropdownValue = 'One';
+  // Dropdown's initial value. This value MUST match an item in the list
+  // created below.
+  String dropdownValue = 'Dropdown';
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class _MyDropdownButtonState extends State<MyDropdownButton> {
               dropdownValue = newValue!;
             });
           },
-          items: <String>['One', 'Two', 'Three', 'Four']
+          items: <String>['Dropdown', 'Button', 'Example']
               .map<DropdownMenuItem<String>>(
             (String value) {
               return DropdownMenuItem<String>(

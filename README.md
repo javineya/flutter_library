@@ -25,3 +25,10 @@ default, which is the top of the widget.
 
 Issues: None, except that this is a difficult widget to show because it doesn't do much.
 Cheats: Put it inside a sized box with a border to show that the text is, in fact, at the bottom.
+
+#3 GestureDetector
+A very versatile widget to check for an impressive amount of different gestures from the user.
+
+Issues: Hard to show just how many different gestures this widget can detect.
+Cheats: Put inside a container with an icon to show the instant effect of the gesture on more than just the test 
+inside the detector.

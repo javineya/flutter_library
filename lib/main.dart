@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import './Widgets/Material Components/dropdown_button.dart';
 import './Widgets/Layout/baseline.dart';
+import './Widgets/Interaction Models/gesture_detector.dart';
+import './Widgets/Styling/theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -33,21 +36,26 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text('Flutter Library'),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text('A switch to change from Light to Dark.'),
-              Switch(
-                  value: _light,
-                  onChanged: (toggle) {
-                    setState(() {
-                      _light = toggle;
-                    });
-                  }),
-              MyDropdownButton(),
-              MyBaseline()
-            ],
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text('A switch to change from Light to Dark.'),
+                Switch(
+                    value: _light,
+                    onChanged: (toggle) {
+                      setState(() {
+                        _light = toggle;
+                      });
+                    }),
+                MyDropdownButton(),
+                MyBaseline(),
+                MyGestureDetector(),
+                MyTheme(),
+              ],
+            ),
           ),
         ),
       ),

@@ -17,10 +17,14 @@ class MyBaseline extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(border: Border.all()),
+      height: 100.0,
       child: Baseline(
-          baseline: 60.0,
+          baseline: 40.0,
           baselineType: TextBaseline.alphabetic,
-          child: Text('My text is on the bottom!')),
+          child: Text('A baseline widget allows text to be drawn at a '
+              'specified distance away from the top of its parent. This '
+              'example is 40 pixels from the top. Border added to show the '
+              'effect.')),
     );
   }
 }
